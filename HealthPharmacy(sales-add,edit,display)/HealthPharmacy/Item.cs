@@ -12,7 +12,6 @@ namespace HealthPharmacy
         private int Quantity;
         private string Manufacturer;
         private string type;
-        private DateTime ExpiryDate;
 
         public Item()
         {

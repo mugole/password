@@ -45,11 +45,16 @@
             this.Purchaselabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.EditTab = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.EditSalesBox = new System.Windows.Forms.TextBox();
+            this.EditPurchaseBox = new System.Windows.Forms.TextBox();
+            this.EditCategoryBox = new System.Windows.Forms.TextBox();
+            this.EditNameBox = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.EditButton = new System.Windows.Forms.Button();
-            this.SalesBox4 = new System.Windows.Forms.TextBox();
-            this.PurchaseBox3 = new System.Windows.Forms.TextBox();
-            this.CategoryBox2 = new System.Windows.Forms.TextBox();
-            this.NameBox1 = new System.Windows.Forms.TextBox();
             this.DisplayPage = new System.Windows.Forms.TabPage();
             this.SalesList = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.productDatabaseDataSet1)).BeginInit();
@@ -94,30 +99,36 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(52, 298);
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.Font = new System.Drawing.Font("Book Antiqua", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(9, 329);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 31);
+            this.button3.Size = new System.Drawing.Size(176, 34);
             this.button3.TabIndex = 2;
             this.button3.Text = "Monthly Sales Report";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(52, 229);
+            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Font = new System.Drawing.Font("Book Antiqua", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(191, 329);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 34);
+            this.button2.Size = new System.Drawing.Size(169, 34);
             this.button2.TabIndex = 1;
             this.button2.Text = "Weekly Sales Report";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(52, 156);
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Font = new System.Drawing.Font("Book Antiqua", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(366, 329);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 35);
+            this.button1.Size = new System.Drawing.Size(164, 35);
             this.button1.TabIndex = 0;
             this.button1.Text = "Manage Sales Record";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // AddTab
             // 
@@ -153,7 +164,7 @@
             // 
             // SalesBox
             // 
-            this.SalesBox.Location = new System.Drawing.Point(294, 240);
+            this.SalesBox.Location = new System.Drawing.Point(294, 242);
             this.SalesBox.Name = "SalesBox";
             this.SalesBox.Size = new System.Drawing.Size(100, 20);
             this.SalesBox.TabIndex = 9;
@@ -228,11 +239,16 @@
             // EditTab
             // 
             this.EditTab.BackgroundImage = global::HealthPharmacy.Properties.Resources.image2;
+            this.EditTab.Controls.Add(this.label5);
+            this.EditTab.Controls.Add(this.label4);
+            this.EditTab.Controls.Add(this.label3);
+            this.EditTab.Controls.Add(this.label1);
+            this.EditTab.Controls.Add(this.EditSalesBox);
+            this.EditTab.Controls.Add(this.EditPurchaseBox);
+            this.EditTab.Controls.Add(this.EditCategoryBox);
+            this.EditTab.Controls.Add(this.EditNameBox);
+            this.EditTab.Controls.Add(this.comboBox1);
             this.EditTab.Controls.Add(this.EditButton);
-            this.EditTab.Controls.Add(this.SalesBox4);
-            this.EditTab.Controls.Add(this.PurchaseBox3);
-            this.EditTab.Controls.Add(this.CategoryBox2);
-            this.EditTab.Controls.Add(this.NameBox1);
             this.EditTab.Location = new System.Drawing.Point(4, 22);
             this.EditTab.Name = "EditTab";
             this.EditTab.Size = new System.Drawing.Size(539, 390);
@@ -240,43 +256,94 @@
             this.EditTab.Text = "Edit Sales";
             this.EditTab.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Book Antiqua", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(60, 304);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 20);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Sales Price";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Book Antiqua", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(60, 254);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Purchase Price";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Book Antiqua", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(57, 211);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Category";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Book Antiqua", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(54, 168);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Name";
+            // 
+            // EditSalesBox
+            // 
+            this.EditSalesBox.Location = new System.Drawing.Point(183, 304);
+            this.EditSalesBox.Name = "EditSalesBox";
+            this.EditSalesBox.Size = new System.Drawing.Size(100, 20);
+            this.EditSalesBox.TabIndex = 9;
+            // 
+            // EditPurchaseBox
+            // 
+            this.EditPurchaseBox.Location = new System.Drawing.Point(183, 251);
+            this.EditPurchaseBox.Name = "EditPurchaseBox";
+            this.EditPurchaseBox.Size = new System.Drawing.Size(100, 20);
+            this.EditPurchaseBox.TabIndex = 8;
+            // 
+            // EditCategoryBox
+            // 
+            this.EditCategoryBox.Location = new System.Drawing.Point(183, 205);
+            this.EditCategoryBox.Name = "EditCategoryBox";
+            this.EditCategoryBox.Size = new System.Drawing.Size(100, 20);
+            this.EditCategoryBox.TabIndex = 7;
+            // 
+            // EditNameBox
+            // 
+            this.EditNameBox.Location = new System.Drawing.Point(183, 162);
+            this.EditNameBox.Name = "EditNameBox";
+            this.EditNameBox.Size = new System.Drawing.Size(100, 20);
+            this.EditNameBox.TabIndex = 6;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(35, 100);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(271, 21);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // EditButton
             // 
-            this.EditButton.Location = new System.Drawing.Point(359, 313);
+            this.EditButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.EditButton.Font = new System.Drawing.Font("Book Antiqua", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditButton.Location = new System.Drawing.Point(403, 323);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(75, 23);
+            this.EditButton.Size = new System.Drawing.Size(85, 34);
             this.EditButton.TabIndex = 4;
             this.EditButton.Text = "Edit";
-            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.UseVisualStyleBackColor = false;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
-            // 
-            // SalesBox4
-            // 
-            this.SalesBox4.Location = new System.Drawing.Point(337, 223);
-            this.SalesBox4.Name = "SalesBox4";
-            this.SalesBox4.Size = new System.Drawing.Size(100, 20);
-            this.SalesBox4.TabIndex = 3;
-            // 
-            // PurchaseBox3
-            // 
-            this.PurchaseBox3.Location = new System.Drawing.Point(337, 180);
-            this.PurchaseBox3.Name = "PurchaseBox3";
-            this.PurchaseBox3.Size = new System.Drawing.Size(100, 20);
-            this.PurchaseBox3.TabIndex = 2;
-            // 
-            // CategoryBox2
-            // 
-            this.CategoryBox2.Location = new System.Drawing.Point(337, 140);
-            this.CategoryBox2.Name = "CategoryBox2";
-            this.CategoryBox2.Size = new System.Drawing.Size(100, 20);
-            this.CategoryBox2.TabIndex = 1;
-            // 
-            // NameBox1
-            // 
-            this.NameBox1.Location = new System.Drawing.Point(337, 103);
-            this.NameBox1.Name = "NameBox1";
-            this.NameBox1.Size = new System.Drawing.Size(100, 20);
-            this.NameBox1.TabIndex = 0;
             // 
             // DisplayPage
             // 
@@ -292,7 +359,7 @@
             // SalesList
             // 
             this.SalesList.FormattingEnabled = true;
-            this.SalesList.Location = new System.Drawing.Point(30, 103);
+            this.SalesList.Location = new System.Drawing.Point(119, 106);
             this.SalesList.Name = "SalesList";
             this.SalesList.Size = new System.Drawing.Size(278, 21);
             this.SalesList.TabIndex = 0;
@@ -341,11 +408,16 @@
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Button AddSalesButton;
         private System.Windows.Forms.Button EditButton;
-        private System.Windows.Forms.TextBox SalesBox4;
-        private System.Windows.Forms.TextBox PurchaseBox3;
-        private System.Windows.Forms.TextBox CategoryBox2;
-        private System.Windows.Forms.TextBox NameBox1;
         private System.Windows.Forms.TabPage DisplayPage;
         private System.Windows.Forms.ComboBox SalesList;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox EditSalesBox;
+        private System.Windows.Forms.TextBox EditPurchaseBox;
+        private System.Windows.Forms.TextBox EditCategoryBox;
+        private System.Windows.Forms.TextBox EditNameBox;
     }
 }

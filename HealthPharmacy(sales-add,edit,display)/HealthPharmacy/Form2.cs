@@ -65,39 +65,52 @@ namespace HealthPharmacy
 
         private void EditButton_Click(object sender, EventArgs e)
         {
-            using (connection = new SqlConnection(ConnectionString))
-            using (SqlDataAdapter Adapter = new SqlDataAdapter("SELECT * FROM Sales", connection))
+            connection = new SqlConnection(ConnectionString);
+            connection.Open();
+
+            if (EditNameBox.Text != "")
             {
-                DataTable SalesTable = new DataTable();
-                Adapter.Fill(SalesTable);
-
-                //I have used Panadol just for testing.
-
-                for (int i = 0; i < SalesTable.Rows.Count; i++)
-                {
-                    if ("Panadol" == SalesTable.Rows[i].Field<string>(1))
-                    {
-                        NameBox1.Text = SalesTable.Rows[i].Field<string>(1);
-                        CategoryBox2.Text = SalesTable.Rows[i].Field<string>(3);
-                        PurchaseBox3.Text = Convert.ToString(SalesTable.Rows[i].Field<double>(4));
-                    }
-                }
+                PharmancySales.ItemName = EditNameBox.Text;
+                SqlCommand Command = new SqlCommand("UPDATE Sales SET ItemName = '" + PharmancySales.ItemName + "' WHERE ItemName = '" + PharmancySales.ItemName + "';", connection);
+                Command.ExecuteNonQuery();
             }
+            if (EditCategoryBox.Text != "")
+            {
+                PharmancySales.ItemCategory = EditCategoryBox.Text;
+                SqlCommand Command = new SqlCommand("UPDATE Sales SET Category = '" + PharmancySales.ItemCategory + "' WHERE ItemName = '" + PharmancySales.ItemName + "';", connection);
+                Command.ExecuteNonQuery();
+            }
+            if (EditPurchaseBox.Text != "")
+            {
+                PharmancySales.ItemPurchasePrice = Convert.ToDouble(EditPurchaseBox.Text);
+                SqlCommand Command = new SqlCommand("UPDATE Sales SET PurchasePrice = '" + PharmancySales.ItemPurchasePrice + "' WHERE ItemName = '" + PharmancySales.ItemName + "';", connection);
+                Command.ExecuteNonQuery();
+            }
+            if (EditSalesBox.Text != "")
+            {
+                PharmancySales.ItemSalesPrice = Convert.ToDouble(EditSalesBox.Text);
+                SqlCommand Command = new SqlCommand("UPDATE Sales SET SalesPrice = '" + PharmancySales.ItemSalesPrice + "' WHERE ItemName = '" + PharmancySales.ItemName + "';", connection);
+                Command.ExecuteNonQuery();
+            }
+
+            MessageBox.Show("Item Updated");
+            PopulateSales();
         }
 
         private void PopulateSales()
         {
             SalesList.Items.Clear();
+            comboBox1.Items.Clear();
             using (connection = new SqlConnection(ConnectionString))
             using (SqlDataAdapter Adapter = new SqlDataAdapter("SELECT * FROM Sales", connection))
             {
                 DataTable SalesTable = new DataTable();
-                Adapter.Fill(SalesTable);
+                Adapter.Fill(SalesTable); 
                 for (int i = 0; i < SalesTable.Rows.Count; i++)
                 {
                     SalesList.Items.Add(SalesTable.Rows[i].Field<string>(1));
+                    comboBox1.Items.Add(SalesTable.Rows[i].Field<string>(1));
                 }
-
             }
         }
 
@@ -116,6 +129,11 @@ namespace HealthPharmacy
                     }
                 }
             }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PharmancySales.ItemName = comboBox1.SelectedItem.ToString();
         }
     }
 }
