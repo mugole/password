@@ -27,23 +27,20 @@ namespace HealthPharmacy
             PopulateItem();
         }
 
-        private void listItems_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            MessageBox.Show(listItems.SelectedValue.ToString());
-        }
-
         private void PopulateItem()
         {
             using (connection = new SqlConnection(ConnectionString))
             using (SqlDataAdapter Adapter = new SqlDataAdapter("SELECT * FROM Items",connection))
-            {
-                //connection.Open();
+            {   
                 DataTable ItemTable = new DataTable();
                 Adapter.Fill(ItemTable);
-                listItems.DisplayMember = "Name";
-                listItems.ValueMember = "Manufacturer";
-                listItems.DataSource = ItemTable;
             }
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+           Form2 HomePage = new Form2();
+            HomePage.Show();
         }
     }
 }
